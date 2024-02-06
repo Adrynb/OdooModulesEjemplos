@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="ejemplo01-holamundo.list">
+      <field name="name">ejemplo01-holamundo list</field>
+      <field name="model">ejemplo01-holamundo.ejemplo01-holamundo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ejemplo01-holamundo.action_window">
+      <field name="name">ejemplo01-holamundo window</field>
+      <field name="res_model">ejemplo01-holamundo.ejemplo01-holamundo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ejemplo01-holamundo.action_server">
+      <field name="name">ejemplo01-holamundo server</field>
+      <field name="model_id" ref="model_ejemplo01-holamundo_ejemplo01-holamundo"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ejemplo01-holamundo" id="ejemplo01-holamundo.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ejemplo01-holamundo.menu_1" parent="ejemplo01-holamundo.menu_root"/>
+    <menuitem name="Menu 2" id="ejemplo01-holamundo.menu_2" parent="ejemplo01-holamundo.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ejemplo01-holamundo.menu_1_list" parent="ejemplo01-holamundo.menu_1"
+              action="ejemplo01-holamundo.action_window"/>
+    <menuitem name="Server to list" id="ejemplo01-holamundo" parent="ejemplo01-holamundo.menu_2"
+              action="ejemplo01-holamundo.action_server"/>
+-->
+  </data>
+</odoo>
