@@ -29,11 +29,10 @@ class lista_tareas(models.Model):
     @api.depends('prioridad')
     #Funcion para calcular el valor de urgente.
     #Recibe "self" que se refiere al modelo completo (no a un registro solo)
+
     def _value_urgente(self):
-        #Para cada registro... (recordamos, self es el modelo, no un registro)
         for record in self:
-            #Si la prioridad es mayor que 10, se considera urgente, en otro caso no lo es
-            if record.prioridad>30:
+            if record.prioridad > 30:
                 record.urgente = True
-            else:
-                record.urgente = False
+        else:
+            record.urgente = False
