@@ -2,39 +2,24 @@
 
 from odoo import models, fields, api
 
-#Definimos el modelo de datos
 class lista_tareas(models.Model):
-    #Nombre y descripcion del modelo de datos
     _name = 'lista_tareas.lista'
     _description = 'Modelo de la lista de tareas'
+    
     imagen = fields.Binary(string='Imagen')
+    tarea = fields.Char(string='Tarea', required=True)
+    prioridad = fields.Integer(string='Prioridad')
+    urgente = fields.Boolean(string='Urgente', compute="_compute_urgente", store=True)
+    realizada = fields.Boolean(string='Realizada')
+    fecha_inicio = fields.Date(string='Fecha de inicio')
+    fecha_fin = fields.Date(string='Fecha de fin')
 
-    #Como no tenemos un atributo "name" en nuestro modelo, indicamos que cuando
-    #se necesite un nombre, se usara el atributo tarea
-    _rec_name="tarea"
-
-    #Elementos de cada fila del modelo de datos
-    #Los tipos de datos a usar en el ORM son 
-    # https://www.odoo.com/documentation/14.0/developer/reference/addons/orm.html#fields
-   
-    tarea = fields.Char()
-    prioridad = fields.Integer()
-    #Indicamos que este valor es computado y se computara con la funcion "_value_urgente"
-    #Con store=True indicamos que pese a ser computado, cada vez que se compute se guarde en la base de datos
-    #esto se hace para que podamos utilizar el campo en busquedas, filtrados y ordenaciones
-    urgente = fields.Boolean(compute="_value_urgente", store=True)
-    realizada = fields.Boolean()
-
-
-    #Este es un ejemplo de "valor computado." Este computo depende de la variable prioridad.
-    #La dependencia se indica mediante el decorador
+    # Método para calcular el campo "urgente" basado en la prioridad
     @api.depends('prioridad')
-    #Funcion para calcular el valor de urgente.
-    #Recibe "self" que se refiere al modelo completo (no a un registro solo)
-
-    def _value_urgente(self):
+    def _compute_urgente(self):
         for record in self:
-            if record.prioridad > 30:
-                record.urgente = True
-        else:
-            record.urgente = False
+            record.urgente = record.prioridad > 30
+
+    # Método para marcar una tarea como realizada
+    def mark_done(self):
+        self.write({'realizada': True})
