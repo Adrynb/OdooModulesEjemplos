@@ -1,0 +1,14 @@
+<odoo>
+    <record id="menu_hospital_management" model="ir.ui.menu">
+        <field name="name">Hospital Management</field>
+        <field name="sequence" eval="10" />
+    </record>
+    <menuitem id="menu_paciente_lista" name="Lista de Pacientes" parent="menu_hospital_management"
+        action="action_view_patient"></menuitem>
+
+    <menuitem id="menu_diagnostico_lista" name="Lista de Diagnósticos" parent="menu_hospital_management"
+        action="action_view_diagnosis"></menuitem>
+
+    <menuitem id="menu_doctor_lista" name="Lista de Doctores" parent="menu_hospital_management"
+        action="action_view_doctor"></menuitem>
+</odoo>
