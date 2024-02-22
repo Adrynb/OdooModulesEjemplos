@@ -7,3 +7,6 @@ class Patient(models.Model):
 
     name = fields.Char(string='Nombre y apellidos')
     symptoms = fields.Text(string='Síntomas')
+    _diagnosis_id = fields.One2many('hospital.diagnosis', 'patient_id', string="Diagnositco", 
+    readonly=True 
+    )

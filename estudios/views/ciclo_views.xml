@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_ciclo_tree">
+            <field name="name">estudios.ciclo.tree</field>
+            <field name="model">estudios.ciclo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="dni" />
+                    <field name="models_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record model = "ir.ui.view" id="view_ciclo_form">
+            <field name="name">estudios.ciclo.form</field>
+            <field name="model">estudios.alumno</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="apellidos"/>
+                            <field name="dni"/>
+                            <field name="models_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
