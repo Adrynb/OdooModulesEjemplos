@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_main_root" name="Tarea4" />
+        
+        <menuitem id="menu_main_estudios" name="Estudios" parent="menu_main_root" />
+
+        <menuitem id="menu_ciclos_list" name="Ciclos Lista" parent="menu_main_estudios"
+            action="action_ciclo_formativo" />
+
+        <menuitem id="menu_modulo_list" name="Modulo Lista" parent="menu_main_estudios"
+            action="action_modulo" />
+
+        <menuitem id="menu_main_personas" name="Personas" parent="menu_main_root" />
+
+        <menuitem id="menu_alumnos_list" name="Alumnos Lista" parent="menu_main_personas"
+            action="action_alumno" />
+
+        <menuitem id="menu_profesor_list" name="Profesor Lista" parent="menu_main_personas"
+            action="action_profesor" />
+    </data>
+</odoo>

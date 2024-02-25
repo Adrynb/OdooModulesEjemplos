@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_estudios_estudios,estudios.estudios,model_estudios_estudios,base.group_user,1,1,1,1
+access_estudios_alumno,estudios.alumno,model_estudios_alumno,base.group_user,1,1,1,1
+access_estudios_ciclo,estudios.ciclo,model_estudios_ciclo,base.group_user,1,1,1,1
+access_estudios_modulo,estudios.modulo,model_estudios_modulo,base.group_user,1,1,1,1
+access_estudios_profesor,estudios.profesor,model_estudios_profesor,base.group_user,1,1,1,1

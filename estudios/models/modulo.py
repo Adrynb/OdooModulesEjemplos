@@ -1,11 +1,8 @@
 from odoo import models, api, fields
-
 class Modulo(models.Model):
-    _name = "modulo"
+    _name = "estudios.modulo"
 
     modulo = fields.Char(string="Modulo", required=True)
-    alumno_id = fields.Many2one('alumno', 'models_id', string="Alumno")
-    ciclo_id = fields.Many2many('ciclo.formativo', 'models_id', string="Ciclo")
-    profesor_id = fields.Many2one('profesor', 'models_id', string="Profesor")
-
-    
+    alumno_id = fields.Many2many('estudios.alumno', string="Alumno", readonly=True)
+    ciclo_id = fields.Many2one('estudios.ciclo', string="Ciclo", readonly=True)
+    profesor_id = fields.Many2one('estudios.profesor', string="Profesor", readonly=True)

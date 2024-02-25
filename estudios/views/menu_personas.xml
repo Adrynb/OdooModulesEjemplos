@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <menuitem id="menu_custom_top_personas" name="Menu de Personas" />
+
+        <menuitem id="menu_estudios_alumno" parent="menu_custom_top_personas"
+            name="Alumnos" action="action_estudios_alumno" sequence="10" />
+
+        <menuitem id="menu_estudios_profesor" parent="menu_custom_top_personas"
+            name="Profesores" action="action_estudios_profesor" sequence="20" />
+
+        <menuitem id="menu_custom_top_estudios" name="Menu de Estudios " />
+
+        <menuitem id="menu_estudios_ciclos" parent="menu_custom_top_estudios" name="Ciclos"
+            action="action_estudios_ciclo" sequence="20" />
+
+        <menuitem id="menu_estudios_modulos" parent="menu_custom_top_estudios" name="Modulos"
+            action="action_estudios_modulo" sequence="20" />
+
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_ciclo_formativo_form" model="ir.ui.view">
+            <field name="name">ciclo.formativo.form</field>
+            <field name="model">tarea4.ciclo</field>
+            <field name="arch" type="xml">
+                <form string="Ciclo Formativo">
+                    <sheet>
+                        <group>
+                            <field name="ciclo"/>
+                            <field name="models_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_ciclo_formativo_tree" model="ir.ui.view">
+            <field name="name">ciclo.formativo.tree</field>
+            <field name="model">tarea4.ciclo</field>
+            <field name="arch" type="xml">
+                <tree string="Ciclos Formativos">
+                    <field name="ciclo"/>
+                    <field name="models_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_ciclo_formativo" model="ir.actions.act_window">
+            <field name="name">Ciclos Formativos</field>
+            <field name="res_model">tarea4.ciclo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

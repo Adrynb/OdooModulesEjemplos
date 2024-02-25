@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tarea4_ciclo_director,tarea4.ciclo,model_tarea4_ciclo,group_director,1,1,1,1
+access_tarea4_modulo_director,tarea4.modulo,model_tarea4_modulo,group_director,1,1,1,1
+access_tarea4_alumno_director,tarea4.alumno,model_tarea4_alumno,group_director,1,1,1,1
+access_tarea4_profesor_director,tarea4.profesor,model_tarea4_profesor,group_director,1,1,1,1
+
+access_tarea4_ciclo_profesor,tarea4.ciclo,model_tarea4_ciclo,group_profesor,1,1,1,1
+access_tarea4_modulo_profesor,tarea4.modulo,model_tarea4_modulo,group_profesor,1,1,1,1
+access_tarea4_alumno_profesor,tarea4.alumno,model_tarea4_alumno,group_profesor,1,1,1,1
+access_tarea4_profesor_profesor,tarea4.profesor,model_tarea4_profesor,group_profesor,1,0,0,0
+
+access_tarea4_alumno,tarea4.alumno,model_tarea4_alumno,base.group_user,1,1,1,1
+access_tarea4_ciclo,tarea4.ciclo,model_tarea4_ciclo,base.group_user,1,1,1,1
+access_tarea4_modulo,tarea4.modulo,model_tarea4_modulo,base.group_user,1,1,1,1
+access_tarea4_profesor,tarea4.profesor,model_tarea4_profesor,base.group_user,1,1,1,1

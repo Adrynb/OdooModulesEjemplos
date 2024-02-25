@@ -1,8 +1,8 @@
 from odoo import models, api, fields 
 
 class Ciclo(models.Model):
-    _name = 'ciclo.formativo'
+    _name = 'estudios.ciclo'
     
-    name = fields.Char(string="Nombre", required = True)
-    models_id = fields.One2many("modulo", "ciclo_id", string="Modulos")
+    ciclo = fields.Char(string="Ciclo", required = True)
+    modulos_id = fields.One2many("estudios.modulo", "ciclo_id", string="Modulos")
     

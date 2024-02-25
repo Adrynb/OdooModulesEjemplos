@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Estudios",
+    'name': "estudios",
 
     'summary': "Short (1 phrase/line) summary of the module's purpose",
+     'sequence': 1,
 
     'description': """
 Long description of module's purpose
@@ -22,11 +23,12 @@ Long description of module's purpose
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/modulo_views.xml',
         'views/alumno_views.xml',
         'views/ciclo_views.xml',
-        'views/profesor_views.xml'
+        'views/profesor_views.xml',
+        'views/menu_personas.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
